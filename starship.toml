@@ -1,0 +1,67 @@
+format = """
+[┌╴\\(](bright-blue)[$username in $hostname $os](bright-blue)[\\)](bold bright-blue) $directory$git_branch$git_commit
+[└─](bright-blue) $character\
+"""
+
+# シェルのプロンプトの間に空行を挿入する
+add_newline = true
+
+# 記号"❯"を記号"➜"に置き換える
+[character] # 設定対象のモジュール名は 'character'
+success_symbol = "[\\$](bright-blue)"
+error_symbol = "[x](bold red)"
+vimcmd_symbol = "[\\$](bright-blue)"
+
+[directory]
+style='bold cyan'
+
+# パッケージ別
+
+[git_commit]
+tag_symbol = "\\($hash$tag\\)"
+
+[git_status]
+ahead = ">"
+behind = "<"
+diverged = "<>"
+renamed = "r"
+deleted = "x"
+
+[os]
+disabled = false
+style = "bg:color_orange fg:color_fg0"
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+EndeavourOS = ""
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+Pop = ""
+
+[hostname]
+ssh_only=false
+ssh_symbol=' via ssh'
+style='bold bright-yellow'
+format='[$hostname$ssh_symbol]($style)'
+
+[username]
+show_always=true
+style_user='bold bright-yellow'
+style_root='bold red'
+format='[$user]($style)'
