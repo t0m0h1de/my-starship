@@ -1,6 +1,6 @@
 format = """
-[┌╴\\(](bright-blue)[$username in $hostname $os](bright-blue)[\\)](bold bright-blue) $directory$git_branch$git_commit
-[└─](bright-blue) $character\
+[┌╴<](bright-purple)[$username in $hostname $os](bright-purple)[>](bold bright-purple) $directory$git_branch$git_commit
+[└─](bright-purple) $character\
 """
 
 # シェルのプロンプトの間に空行を挿入する
@@ -8,12 +8,12 @@ add_newline = true
 
 # 記号"❯"を記号"➜"に置き換える
 [character] # 設定対象のモジュール名は 'character'
-success_symbol = "[\\$](bright-blue)"
+success_symbol = "[\\$](bright-purple)"
 error_symbol = "[x](bold red)"
-vimcmd_symbol = "[\\$](bright-blue)"
+vimcmd_symbol = "[\\$](bright-purple)"
 
 [directory]
-style='bold cyan'
+style='bold bright-green'
 
 # パッケージ別
 
@@ -32,36 +32,36 @@ disabled = false
 style = "bg:color_orange fg:color_fg0"
 
 [os.symbols]
-Windows = "󰍲"
-Ubuntu = "󰕈"
-SUSE = ""
-Raspbian = "󰐿"
-Mint = "󰣭"
-Macos = "󰀵"
-Manjaro = ""
-Linux = "󰌽"
-Gentoo = "󰣨"
-Fedora = "󰣛"
-Alpine = ""
-Amazon = ""
-Android = ""
-Arch = "󰣇"
-Artix = "󰣇"
-EndeavourOS = ""
-CentOS = ""
-Debian = "󰣚"
-Redhat = "󱄛"
-RedHatEnterprise = "󱄛"
-Pop = ""
+Windows = "Windows"
+Ubuntu = "Ubuntu "
+SUSE = "SUSE"
+Raspbian = "Raspbian "
+Mint = "Mint"
+Macos = "MacOS"
+Manjaro = "Manjaro"
+Linux = "Linux"
+Gentoo = "Gentoo"
+Fedora = "Fedora"
+Alpine = "Alpine"
+Amazon = "Amazon"
+Android = "Android"
+Arch = "Arch"
+Artix = "Artix"
+EndeavourOS = "EndeavourOS"
+CentOS = "CentOS"
+Debian = "Debian"
+Redhat = "RedHat"
+RedHatEnterprise = "RHEL"
+Pop = "Pop"
 
 [hostname]
 ssh_only=false
 ssh_symbol=' via ssh'
-style='bold bright-yellow'
+style='bold bright-blue'
 format='[$hostname$ssh_symbol]($style)'
 
 [username]
 show_always=true
-style_user='bold bright-yellow'
+style_user='bold bright-blue'
 style_root='bold red'
 format='[$user]($style)'
