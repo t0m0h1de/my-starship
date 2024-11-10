@@ -1,6 +1,6 @@
 format = """
 [┌╴<](bright-purple)[$username in $hostname $os](bright-purple)[>](bold bright-purple) $directory$git_branch$git_commit
-[└─](bright-purple) $character\
+[└─](bright-purple) $python$character\
 """
 
 # シェルのプロンプトの間に空行を挿入する
@@ -65,3 +65,7 @@ show_always=true
 style_user='bold bright-blue'
 style_root='bold red'
 format='[$user]($style)'
+
+[python]
+format='[\($virtualenv\)]($style)'
+disabled=false
