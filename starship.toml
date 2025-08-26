@@ -1,5 +1,5 @@
 format = """
-$username $directory$git_branch$git_status $character
+$python$nix_shell$username $directory$git_branch$git_status $character
 """
 
 # シェルのプロンプトの間に空行を挿入する
@@ -38,3 +38,10 @@ show_always=true
 style_user='bright-cyan'
 style_root='red'
 format='[$user]($style)'
+
+[nix_shell]
+disabled=false
+symbol='Nix '
+
+[python]
+format='\($virtualenv\) '
